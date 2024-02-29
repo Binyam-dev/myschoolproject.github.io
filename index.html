@@ -22,6 +22,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
+            position: relative; /* Added */
         }
         h1 {
             font-size: 2rem;
@@ -68,25 +69,28 @@
         }
         /* Login form styling */
         .login-form {
-            margin: 20px auto;
-            max-width: 400px;
-            padding: 20px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            max-width: 200px; /* Adjust width as needed */
+            padding: 10px;
             background: #fff;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem; /* Smaller font size */
         }
         .login-form input[type="text"],
         .login-form input[type="password"] {
             width: 100%;
             margin-bottom: 10px;
-            padding: 10px;
+            padding: 5px; /* Smaller padding */
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
         }
         .login-form input[type="submit"] {
             width: 100%;
-            padding: 10px;
+            padding: 8px; /* Smaller padding */
             border: none;
             border-radius: 5px;
             background-color: #333;
@@ -104,6 +108,16 @@
         <p>Quality Services Since 2015</p>
     </header>
     <div class="container">
+        <!-- Login form -->
+        <div class="login-form">
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+        
         <!-- Search form -->
         <div class="search-form">
             <form action="#" method="get">
@@ -126,16 +140,6 @@
             <p>Price: $XX.XX</p>
         </div>
         <!-- Add more product entries as needed -->
-
-        <!-- Login form -->
-        <div class="login-form">
-            <h2>Login</h2>
-            <form action="#" method="post">
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <input type="submit" value="Login">
-            </form>
-        </div>
 
         <!-- Checkout system -->
         <div class="checkout">
