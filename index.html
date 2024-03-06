@@ -5,25 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retail Gigg - Home</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
-                <li><a href="signin.html">Sign In</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Retail Gigg</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="checkout.html"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="signin.html"><i class="fas fa-user"></i></a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+    <div class="hero">
+        <div class="container">
+            <h1>Welcome to Retail Gigg</h1>
+            <p>Your one-stop destination for freelance services like Photoshop, video editing, and more.</p>
+            <a href="shop.html" class="btn">Shop Now</a>
+        </div>
+    </div>
     <div class="container">
-        <!-- Content for Home page -->
-        <h1>Welcome to Retail Gigg</h1>
-        <p>Your one-stop destination for freelance services like Photoshop, video editing, and more.</p>
-        <p>Explore our services and start your project today!</p>
+        <div class="featured-products">
+            <!-- Featured products will be dynamically added here -->
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
