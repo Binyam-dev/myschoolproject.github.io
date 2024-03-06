@@ -37,7 +37,7 @@ for (let i = 0; i < 10; i++) {
 
 // Cart counter
 let cartCount = 0;
-const cartCounter = document.getElementById("cartCounter");
+const cartCounter = document.getElementById("cartCounter"); 
 
 function addToCart() {
     cartCount++;
