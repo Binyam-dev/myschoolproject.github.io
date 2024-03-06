@@ -22,6 +22,16 @@ header {
 .product-container {
     display: flex;
     overflow: hidden; /* Hide overflowing content */
+    animation: moveLeft 20s linear infinite; /* Animation for product movement */
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .product {
@@ -31,7 +41,6 @@ header {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
-    transition: transform 0.5s ease; /* Smooth transition */
 }
 
 .product img {
