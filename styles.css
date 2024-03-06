@@ -10,8 +10,8 @@ header {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1.5rem; /* Increased padding */
-    font-size: 2rem; /* Larger font size */
+    padding: 1.5rem;
+    font-size: 2rem;
 }
 
 .container {
@@ -20,51 +20,21 @@ header {
     padding: 2rem;
 }
 
-.product-container {
+/* Navigation styling */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    overflow: hidden; /* Hide overflowing content */
-    animation: moveLeft 20s linear infinite; /* Animation for product movement */
 }
 
-@keyframes moveLeft {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-.product {
-    flex: 0 0 auto; /* Do not grow or shrink */
+nav ul li {
     margin-right: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
 }
 
-.product img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-/* Checkout and Sign-in form styling */
-.checkout, .login-form {
-    margin-top: 20px;
-}
-
-.login-form {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.login-form input[type="text"],
-.login-form input[type="password"] {
-    width: 100%;
-    margin-bottom: 10px;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Make the background take full size */
