@@ -9,7 +9,9 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
 }
 
@@ -40,18 +42,40 @@ header {
     border-radius: 5px;
 }
 
-/* Checkout and Sign-in form styling */
-.checkout, .login-form {
-    margin-top: 20px;
+/* Checkout styling */
+.checkout {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
+/* Sign-in form styling */
 .login-form {
+    position: fixed;
+    top: 20px;
+    right: 20px;
     background-color: #f9f9f9;
     padding: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 .login-form input[type="text"],
 .login-form input[type="password"] {
-    width: 100%;
-    margin-bottom:
+    width: calc(100% - 40px);
+    margin-bottom: 10px;
+}
+
+/* Header icons */
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon {
+    margin-right: 10px;
+}
