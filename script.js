@@ -2,7 +2,6 @@
 
 // JavaScript for product animation
 const productContainer = document.getElementById("productContainer");
-const products = document.querySelectorAll(".product");
 
 function createProduct() {
     const product = document.createElement("div");
@@ -34,6 +33,15 @@ function createProduct() {
 // Create multiple products
 for (let i = 0; i < 10; i++) {
     createProduct();
+}
+
+// Cart counter
+let cartCount = 0;
+const cartCounter = document.getElementById("cartCounter");
+
+function addToCart() {
+    cartCount++;
+    cartCounter.textContent = cartCount;
 }
 
 // JavaScript for Sign-in Form
