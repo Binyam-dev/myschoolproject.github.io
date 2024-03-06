@@ -19,11 +19,11 @@ header {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
+    overflow: hidden; /* Hide overflowing content */
 }
 
 .product-container {
     display: flex;
-    overflow: hidden; /* Hide overflowing content */
 }
 
 .product {
@@ -55,6 +55,7 @@ header {
 
 /* Sign-in form styling */
 .login-form {
+    display: none;
     position: fixed;
     top: 20px;
     right: 20px;
