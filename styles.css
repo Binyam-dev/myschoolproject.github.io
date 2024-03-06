@@ -77,12 +77,12 @@ nav ul li a {
 
 /* Product styling */
 .product-container {
+    display: flex;
     overflow: hidden;
-    white-space: nowrap; /* Prevent products from wrapping */
 }
 
 .product {
-    display: inline-block;
+    flex: 0 0 auto;
     width: 300px;
     height: 300px;
     margin-right: 20px;
@@ -90,7 +90,6 @@ nav ul li a {
     border-radius: 5px;
     background-color: #fff;
     cursor: pointer; /* Add cursor pointer to indicate clickable */
-    animation: moveLeft 10s linear infinite; /* Move left animation */
 }
 
 .product img {
@@ -99,11 +98,16 @@ nav ul li a {
     border-radius: 5px;
 }
 
+/* Animation */
 @keyframes moveLeft {
-    from {
-        transform: translateX(100%);
+    0% {
+        transform: translateX(0%);
     }
-    to {
+    100% {
         transform: translateX(-100%);
     }
+}
+
+.product-container {
+    animation: moveLeft 20s infinite linear;
 }
