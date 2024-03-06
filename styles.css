@@ -1,49 +1,76 @@
-/* Basic styling */
-body {
-    font-family: Arial, sans-serif;
+/* Reset CSS */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 2rem;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
 }
 
 .container {
-    max-width: 800px;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
 }
 
-/* Navigation styling */
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
+.logo a {
+    font-size: 1.5rem;
+    color: #333;
     text-decoration: none;
 }
 
-/* Make the background take full size */
-html, body {
-    height: 100%;
+nav ul {
+    list-style-type: none;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url('https://via.placeholder.com/1500x500');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
 }
