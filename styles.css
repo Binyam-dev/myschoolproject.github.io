@@ -22,10 +22,9 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo a {
-    font-size: 1.5rem;
+header h1 {
+    font-size: 2rem;
     color: #333;
-    text-decoration: none;
 }
 
 nav ul {
@@ -76,20 +75,26 @@ nav ul li a {
 }
 
 /* Product styling */
+.products {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
 .product-container {
+    display: flex;
     overflow: hidden;
 }
 
 .product {
-    display: inline-block;
-    width: 300px;
+    flex: 0 0 auto;
+    width: 200px;
     height: 300px;
     margin-right: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
-    cursor: pointer; /* Add cursor pointer to indicate clickable */
-    animation: moveLeft 10s infinite linear; /* Move left animation */
+    cursor: pointer;
+    animation: moveLeft 20s infinite linear;
 }
 
 .product img {
@@ -103,6 +108,6 @@ nav ul li a {
         transform: translateX(100%);
     }
     to {
-        transform: translateX(-110%); /* Change 110% to move beyond the container width */
+        transform: translateX(-100%);
     }
 }
