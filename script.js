@@ -27,11 +27,6 @@ function createProduct() {
     p2.textContent = `Price: $${price}`;
     product.appendChild(p2);
 
-    // Add click event to add product to cart
-    product.addEventListener("click", function() {
-        addToCart();
-    });
-
     productContainer.appendChild(product);
 }
 
