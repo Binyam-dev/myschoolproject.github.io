@@ -1,3 +1,5 @@
+// JavaScript for Retail Gigg website
+
 // JavaScript for product animation
 const productContainer = document.getElementById("productContainer");
 
