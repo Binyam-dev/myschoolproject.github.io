@@ -1,18 +1,32 @@
-// JavaScript for Login Form
-document.getElementById("form").addEventListener("submit", function(event) {
+// JavaScript for product animation
+const productContainer = document.getElementById("productContainer");
+const products = document.querySelectorAll(".product");
+
+let position = 0;
+const animationSpeed = 1; // Adjust speed as needed
+
+function moveProducts() {
+    position -= animationSpeed;
+    productContainer.style.transform = `translateX(${position}px)`;
+
+    // Reset position when the first product moves out of view
+    if (products.length > 0 && products[0].getBoundingClientRect().right < 0) {
+        position = 0;
+        productContainer.style.transform = `translateX(${position}px)`;
+    }
+
+    requestAnimationFrame(moveProducts);
+}
+
+moveProducts();
+
+// JavaScript for Sign-in Form
+document.getElementById("signInForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form submission
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    var username = document.getElementById("signInUsername").value;
+    var password = document.getElementById("signInPassword").value;
     // Do something with username and password
     console.log("Username: " + username + ", Password: " + password);
-});
-
-// JavaScript for Search Form
-document.getElementById("searchForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
-    var searchQuery = document.getElementById("searchInput").value;
-    // Do something with the search query
-    console.log("Search Query: " + searchQuery);
 });
 
 // JavaScript for Checkout Button
