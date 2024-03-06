@@ -1,9 +1,9 @@
 // JavaScript for Retail Gigg website
 
-// Function to create a product
-function createProduct() {
-    const productContainer = document.getElementById("productContainer");
+// JavaScript for product animation
+const productContainer = document.getElementById("productContainer");
 
+function createProduct() {
     const product = document.createElement("div");
     product.classList.add("product");
 
@@ -27,6 +27,11 @@ function createProduct() {
     p2.textContent = `Price: $${price}`;
     product.appendChild(p2);
 
+    // Add click event to add product to cart
+    product.addEventListener("click", function() {
+        addToCart();
+    });
+
     productContainer.appendChild(product);
 }
 
@@ -35,19 +40,26 @@ for (let i = 0; i < 10; i++) {
     createProduct();
 }
 
-// Function to animate products moving to the left
-function animateProducts() {
-    const products = document.querySelectorAll('.product');
-    products.forEach(product => {
-        product.animate([
-            { transform: 'translateX(0)' },
-            { transform: 'translateX(-100%)' }
-        ], {
-            duration: 20000, // 20 seconds
-            iterations: Infinity,
-            easing: 'linear'
-        });
-    });
+// Cart counter
+let cartCount = 0;
+const cartCounter = document.getElementById("cartCounter");
+
+function addToCart() {
+    cartCount++;
+    cartCounter.textContent = cartCount;
 }
 
-animateProducts();
+// JavaScript for Sign-in Form
+document.getElementById("signInForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+    var username = document.getElementById("signInUsername").value;
+    var password = document.getElementById("signInPassword").value;
+    // Do something with username and password
+    console.log("Username: " + username + ", Password: " + password);
+});
+
+// JavaScript for Checkout Button
+document.getElementById("checkoutBtn").addEventListener("click", function() {
+    // Perform checkout action
+    alert("Proceeding to Checkout...");
+});
