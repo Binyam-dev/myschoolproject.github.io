@@ -1,49 +1,33 @@
 // JavaScript for product animation
 const productContainer = document.getElementById("productContainer");
+const products = document.querySelectorAll(".product");
 
-function createProduct() {
-    const product = document.createElement("div");
-    product.classList.add("product");
+let position = 0;
+const animationSpeed = 1; // Adjust speed as needed
 
-    const img = document.createElement("img");
-    // Placeholder image URL from Lorem Picsum
-    img.src = `https://picsum.photos/300/200?random=${Math.random() * 1000}`;
-    img.alt = "Product Image";
-    product.appendChild(img);
+function moveProducts() {
+    position -= animationSpeed;
+    productContainer.style.transform = `translateX(${position}px)`;
 
-    const h2 = document.createElement("h2");
-    h2.textContent = "Product";
-    product.appendChild(h2);
+    // Reset position when the first product moves out of view
+    if (products.length > 0 && products[0].getBoundingClientRect().right < 0) {
+        position = 0;
+        productContainer.style.transform = `translateX(${position}px)`;
+    }
 
-    const p1 = document.createElement("p");
-    p1.textContent = "Description of the product.";
-    product.appendChild(p1);
-
-    const p2 = document.createElement("p");
-    // Random price between $10 and $100
-    const price = (Math.random() * (100 - 10) + 10).toFixed(2);
-    p2.textContent = `Price: $${price}`;
-    product.appendChild(p2);
-
-    productContainer.appendChild(product);
+    requestAnimationFrame(moveProducts);
 }
 
-// Create multiple products
-for (let i = 0; i < 10; i++) {
-    createProduct();
-}
+moveProducts();
 
 // JavaScript for Sign-in Form
-document.getElementById("signInForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
-    var username = document.getElementById("signInUsername").value;
-    var password = document.getElementById("signInPassword").value;
-    // Do something with username and password
-    console.log("Username: " + username + ", Password: " + password);
+const signInLink = document.querySelector(".sign-in-link");
+const loginForm = document.querySelector(".login-form");
+
+signInLink.addEventListener("mouseenter", function() {
+    loginForm.style.display = "block";
 });
 
-// JavaScript for Checkout Button
-document.getElementById("checkoutBtn").addEventListener("click", function() {
-    // Perform checkout action
-    alert("Proceeding to Checkout...");
+signInLink.addEventListener("mouseleave", function() {
+    loginForm.style.display = "none";
 });
