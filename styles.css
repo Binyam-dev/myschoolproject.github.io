@@ -5,91 +5,53 @@ body {
     padding: 0;
     background-color: #f9f9f9;
 }
+
 header {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1rem;
 }
+
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    position: relative;
 }
-h1 {
-    font-size: 2rem;
+
+.product-container {
+    display: flex;
+    overflow: hidden; /* Hide overflowing content */
 }
-p {
-    font-size: 1.1rem;
-}
-/* Search form styling */
-.search-form {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.search-form input[type="text"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 60%;
-    margin-right: 10px;
-    box-sizing: border-box;
-}
-.search-form input[type="submit"] {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-}
-.search-form input[type="submit"]:hover {
-    background-color: #555;
-}
-/* Product styling */
+
 .product {
-    margin-bottom: 20px;
+    flex: 0 0 auto; /* Do not grow or shrink */
+    margin-right: 20px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
     background-color: #fff;
+    transition: transform 0.5s ease; /* Smooth transition */
 }
+
 .product img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 5px;
 }
-/* Login form styling */
-.login-form {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    max-width: 200px;
-    padding: 10px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-size: 0.9rem;
+
+/* Checkout and Sign-in form styling */
+.checkout, .login-form {
+    margin-top: 20px;
 }
+
+.login-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
 .login-form input[type="text"],
 .login-form input[type="password"] {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-.login-form input[type="submit"] {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-}
-.login-form input[type="submit"]:hover {
-    background-color: #555;
-}
+    margin-bottom:
