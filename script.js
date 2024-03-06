@@ -32,7 +32,7 @@ function createProduct() {
 
 // Create multiple products
 for (let i = 0; i < 10; i++) {
-    createProduct();
+    createProduct(); 
 }
 
 // JavaScript for Sign-in Form
