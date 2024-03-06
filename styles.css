@@ -78,6 +78,7 @@ nav ul li a {
 /* Product styling */
 .product-container {
     overflow: hidden;
+    white-space: nowrap; /* Prevent products from wrapping */
 }
 
 .product {
@@ -89,7 +90,7 @@ nav ul li a {
     border-radius: 5px;
     background-color: #fff;
     cursor: pointer; /* Add cursor pointer to indicate clickable */
-    animation: moveLeft 10s infinite linear; /* Move left animation */
+    animation: moveLeft 10s linear infinite; /* Move left animation */
 }
 
 .product img {
