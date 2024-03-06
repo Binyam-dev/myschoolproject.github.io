@@ -1,15 +1,15 @@
 // JavaScript for Retail Gigg website
 
-// JavaScript for product animation
-const productContainer = document.getElementById("productContainer");
-
+// Function to create a product
 function createProduct() {
+    const productContainer = document.getElementById("productContainer");
+
     const product = document.createElement("div");
     product.classList.add("product");
 
     const img = document.createElement("img");
     // Placeholder image URL from Lorem Picsum
-    img.src = `https://picsum.photos/300/200?random=${Math.random() * 1000}`;
+    img.src = `https://picsum.photos/300/300?random=${Math.random() * 1000}`;
     img.alt = "Product Image";
     product.appendChild(img);
 
@@ -32,20 +32,22 @@ function createProduct() {
 
 // Create multiple products
 for (let i = 0; i < 10; i++) {
-    createProduct(); 
+    createProduct();
 }
 
-// JavaScript for Sign-in Form
-document.getElementById("signInForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
-    var username = document.getElementById("signInUsername").value;
-    var password = document.getElementById("signInPassword").value;
-    // Do something with username and password
-    console.log("Username: " + username + ", Password: " + password);
-});
+// Function to animate products moving to the left
+function animateProducts() {
+    const products = document.querySelectorAll('.product');
+    products.forEach(product => {
+        product.animate([
+            { transform: 'translateX(0)' },
+            { transform: 'translateX(-100%)' }
+        ], {
+            duration: 20000, // 20 seconds
+            iterations: Infinity,
+            easing: 'linear'
+        });
+    });
+}
 
-// JavaScript for Checkout Button
-document.getElementById("checkoutBtn").addEventListener("click", function() {
-    // Perform checkout action
-    alert("Proceeding to Checkout...");
-});
+animateProducts();
