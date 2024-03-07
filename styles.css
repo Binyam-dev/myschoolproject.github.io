@@ -83,6 +83,7 @@ nav ul li a {
 
 .product-container {
     display: flex; /* Display products side by side */
+    flex-wrap: wrap;
     overflow: hidden; /* Hide overflowing content */
 }
 
