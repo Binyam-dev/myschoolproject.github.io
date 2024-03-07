@@ -43,7 +43,7 @@ nav ul li a {
 
 .hero {
     background-image: url('images/hero-image.jpg');
-    background-size: 1500px 500px; /* Set background size */
+    background-size: 1500px 800px; /* Set background size */
     background-position: center;
     color: #fff;
     text-align: center;
