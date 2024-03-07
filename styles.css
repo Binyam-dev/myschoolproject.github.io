@@ -78,19 +78,21 @@ nav ul li a {
 .products {
     background-color: #fff;
     padding: 20px 0;
+    overflow: hidden; /* Ensure products don't overflow horizontally */
 }
 
 .product-container {
-    display: flex; /* Change to flex for horizontal layout */
+    display: flex; /* Display products side by side */
     overflow: hidden; /* Hide overflowing content */
 }
 
 .product {
+    flex: 0 0 auto; /* Prevent products from growing or shrinking */
     width: 300px; /* Set width for each product */
     background-color: #fff;
     border-radius: 5px;
     margin-right: 20px; /* Add margin between products */
-    animation: moveLeft 20s infinite linear;
+    animation: moveLeft 20s infinite linear; /* Apply animation for continuous movement */
 }
 
 .product img {
@@ -100,10 +102,10 @@ nav ul li a {
 }
 
 @keyframes moveLeft {
-    from {
+    0% {
         transform: translateX(100%);
     }
-    to {
+    100% {
         transform: translateX(-100%);
     }
 }
