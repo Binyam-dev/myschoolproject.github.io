@@ -35,6 +35,31 @@ for (let i = 0; i < 10; i++) {
     createProduct();
 }
 
+// Move products horizontally
+const products = document.querySelectorAll(".product");
+const containerWidth = productContainer.offsetWidth;
+
+let initialPosition = containerWidth;
+products.forEach((product) => {
+    product.style.transform = `translateX(${initialPosition}px)`;
+    initialPosition += product.offsetWidth;
+});
+
+function moveProducts() {
+    products.forEach((product) => {
+        const currentPosition = parseInt(product.style.transform.slice(11, -3));
+        const newPosition = currentPosition - 1; // Adjust the speed of animation by changing this value
+        product.style.transform = `translateX(${newPosition}px)`;
+
+        if (newPosition <= -product.offsetWidth) {
+            // Reset position once product moves out of the container
+            product.style.transform = `translateX(${containerWidth}px)`;
+        }
+    });
+}
+
+setInterval(moveProducts, 50); // Adjust the interval for smoother or faster animation
+
 // Cart counter
 let cartCount = 0;
 const cartCounter = document.getElementById("cartCounter"); 
